@@ -189,7 +189,8 @@ function connect() {
   };
 }
 
-// Handles a click on the Send button (or pressing return/enter) by
+// Handles a click on the Send button (or pressing re
+/enter) by
 // building a "message" object and sending it to the server.
 function handleSendButton() {
   var msg = {
@@ -228,9 +229,14 @@ async function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
     iceServers: [     // Information about ICE servers - Use your own!
       {
-        urls: "turn:" + myHostname,  // A TURN server
-        username: "webrtc",
-        credential: "turnserver"
+         url:'stun:stun.softjoys.com',
+        url: 'turn:numb.viagenie.ca',
+        credential: 'muazkh',
+        username: 'webrtc@live.com'
+
+//         urls: "turn:" + myHostname,  // A TURN server
+//         username: "webrtc",
+//         credential: "turnserver"
       }
     ]
   });
